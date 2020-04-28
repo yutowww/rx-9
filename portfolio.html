@@ -29,7 +29,7 @@
 }
 #profile {
     color: ivory;
-    font-size: 30px;
+    font-size: 20px;
     width: auto;
     left: auto;
     float: left;
@@ -38,21 +38,49 @@
 }
 #like {
     color: ivory;
-    font-size: 30px;
+    font-size: 20px;
     width: auto;
     left: auto;
     float: left;
     box-sizing: border-box;
     position: relative;
 }
-#footer {
+#contact {
+    margin: auto;
+    width: auto;
+    left: auto;
+    float: left;
+    box-sizing: border-box;
+    position: relative; 
+}
+#menu {
+    color: ivory;
+    font-size: 20px;
+    width: auto;
+    left: auto;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+#button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
     color: ivory;
     font-size: 30px;
+    border-style: none;
+    border-color: none;
+    background: none;
+    cursor: pointer;
+    float: left;
+    outline: none;
+
+}
+#footer {
+    color: ivory;
+    font-size: 15px;
     width: 100%;
     text-align: center;
     padding:  30px 0;
-    /* position: absolute;
-    bottom: 0; */
     float: left;
 }
 
@@ -121,14 +149,14 @@
 
 .container {
     overflow: auto;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     height: 100vh;
-    transition: 5.8s;
+    transition: .8s;
 }
 .area {
     scroll-snap-align: start;
     height: 100vh;
-    transition: 5.8s;
+    transition: .8s;
 }
 
 
@@ -139,11 +167,11 @@
 </head>
 <body>
     <div class="container">
-<section class="area">
-    <div id="header">
-        <head>yuto watanabe.</head>
-    </div>
-</section>
+        <section class="area">
+            <div id="header">
+                <head>yuto watanabe.</head>
+            </div>
+        </section>
    
 
      <section class="area">
@@ -153,32 +181,59 @@
          <div id="jeans"><img src="img/jeans.JPG" width="300" height="300"></div>
          <div id="aqua"><img src="img/aquarium.JPG" width="300" height="300"></div>
         </section>
+</br></br></br></br></br>
    
-     <section class="area">
-     <div id="profile">
-        <h1>Profile</h1>
-        <p>Name:Yuto Watanabe 
-            From:Kanagawa</p> 
-            <p>Graduate:Komazawa Univercity </p>
-            <p>Birth Date:11/27 
-            Personarity:Cheerful </p>
-     </div>
+    <section class="area">
+        <div id="profile">
+            <h1>Profile</h1>
+                <ul>
+                    <li>Name:Yuto Watanabe</li>
+                    <li>From:Kanagawa</li>
+                    <li>Graduate:Komazawa Univercity</li>
+                    <li>Birth Date:11/27</li>
+                    <li>Personarity:Cheerful</li>
+            </ul>
+        </div>
     </section>
 
     <section class="area">
-     <div id="like">
-        <h2>Like</h2>
-        <p>Music:Metal Jazz Disney   Movie:Disney Action SF  Musical Instrument:Guitar  Vehicle:Cars
-        </p>
-     </div>
+        <div id="like">
+            <h2>Like</h2>
+                <ul>
+                    <li>Music:Metal Jazz Disney</li>
+                    <li>Movie:Disney Action SF</li>
+                    <li>Musical Instrument:Guitar</li>
+                    <li>Vehicle:Cars</li>
+                </ul>
+        </div>
     </section>
 
-       
 
-        
-        
-        <div id="face"><img src="img/facebook.png" width="100" height="100"></div>
-        <div id="ist"><img src="img/instagram.png" width="100" height="100"></div>
+    <section class="area">
+        <div id="contact">
+            <h3><input type="button" value="Contact" onclick="Btn1()" id="button"> </h3>
+        </div>
+
+        <div id="menu">
+            <ul>
+                <li><p>yourname:<input type="text" name="yourname"></p></li>
+                <li><p>E-mail Address:<input type="text" name="Address"></p></li>
+                <li><p>Comemnts:<input type="text" name="Comemnts" style="width: auto;height: auto;"></p></li>
+                <li><button type="submit">submit</button></li>
+            </ul>
+        </div>        
+    </section>
+
+        <div id="face">
+            <a href="https://ja-jp.facebook.com/">
+                <img src="img/facebook.png" width="100" height="100">
+            </a>
+        </div>
+        <div id="ist">
+            <a href="https://www.instagram.com/">
+                <img src="img/instagram.png" width="100" height="100">
+            </a>
+        </div>
 
 
      <section class="area">   
@@ -186,14 +241,22 @@
             <footer>copyright©</footer>
         </div>
     </section>
-</div>
+
 
 <script>
-    'use strict'
+    'use strict';
 
-    const ist = document.getElementById("img/instagram.png").onclick =function()  {
-        location.href = "https://www.instagram.com/?hl=ja";
-    }
+        document.getElementById('menu').style.display = "none";
+
+            function Btn1() {
+                const menu = document.getElementById('menu');
+
+                if(menu.style.display == 'block') {
+                    menu.style.display = 'none';
+                }else {
+                    menu.style.display = 'block';
+                }
+            }
 
 </script>
 </body>
