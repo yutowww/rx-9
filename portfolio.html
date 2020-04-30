@@ -13,6 +13,7 @@
      height: fit-content;
      background-repeat: no-repeat;
      background-size: cover;
+     overflow: hidden;
      
  }
  
@@ -153,6 +154,9 @@
     height: 100vh;
     transition: .8s;
 }
+.container::-webkit-scrollbar{
+    display: none;
+}
 .area {
     scroll-snap-align: start;
     height: 100vh;
@@ -218,7 +222,7 @@
             <ul>
                 <li><p>yourname:<input type="text" name="yourname"></p></li>
                 <li><p>E-mail Address:<input type="text" name="Address"></p></li>
-                <li><p>Comemnts:<input type="text" name="Comemnts" style="width: auto;height: auto;"></p></li>
+                <li><textarea placeholder="Comments"></textarea></li>
                 <li><button type="submit">submit</button></li>
             </ul>
         </div>        
